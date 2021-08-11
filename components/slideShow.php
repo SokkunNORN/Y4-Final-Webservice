@@ -5,65 +5,75 @@
         <div class="slide is-active ">
           <div class="slide-content">
             <div class="caption">
-              <div class="title">Slide title 1</div>
+              <div class="title">MacBook</div>
               <div class="text">
-                <p>Slide description 1</p>
+                <p>MacBook Pro 16" 2021 Big Sur.Processor 2.3 GHz 8-Core Intel Core i9. Memory 16 GB 2667 MHz DDR4</p>
               </div>
               <a href="#" class="btn">
-                <span class="btn-inner">Learn More</span>
+                <span class="btn-inner">Buy Now</span>
               </a>
             </div>
           </div>
           <div class="image-container">
-            <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-1.jpg" alt="" class="image" />
+            <img src="./asset/mac.jpeg" alt="" class="image" />
           </div>
         </div>
         <div class="slide">
           <div class="slide-content">
             <div class="caption">
-              <div class="title">Slide title 2</div>
+              <div class="title">MSI</div>
               <div class="text">
-                <p>Slide description 2</p>
+                <p>
+                  MSI GF75 Thin Gaming Laptop, 17.3" FHD 120Hz IPS Screen,Intel Core i5-10300H Processor 
+                  Up to 4.50 GHz, NVIDIA GTX 1650 Graphics, 8GB RAM
+                </p>
               </div>
               <a href="#" class="btn">
-                <span class="btn-inner">Learn More</span>
+                <span class="btn-inner">Buy Now</span>
               </a>
             </div>
           </div>
           <div class="image-container">
-            <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-4-1.jpg" alt="" class="image" />
+            <img src="./asset/msi.jpeg" alt="" class="image" />
           </div>
         </div>
         <div class="slide">
           <div class="slide-content">
             <div class="caption">
-              <div class="title">Slide title 3</div>
+              <div class="title">Dell</div>
               <div class="text">
-                <p>Slide description 3</p>
+                <p>
+                  2020 Newest Dell Inspiron 15 5000 Premium PC Laptop: 15.6 Inch FHD Anti-Glare NonTouch Display,10th Gen i5, 
+                  16GB RAM, 256GB SSD, Intel UHD Graphics, WiFi, Bluetooth, HDMI, Webcam, Backlit-KB, Win10
+                </p>
               </div>
               <a href="#" class="btn">
-                <span class="btn-inner">Learn More</span>
+                <span class="btn-inner">Buy Now</span>
               </a>
             </div>
           </div>
           <div class="image-container">
-            <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg" alt="" class="image" />
+            <img src="./asset/dell.jpeg" alt="" class="image" />
           </div>
         </div>
         <div class="slide">
           <div class="slide-content">
             <div class="caption">
-              <div class="title">Slide title 4</div>
+              <div class="title">ASUS</div>
               <div class="text">
-                <p>Slide description 4</p>
+                <p>
+                  ASUS ROG Strix SCAR II 17.3" Gaming Laptop Intel Core i7 16Gb Memory NVIDIA GeForce 
+                  RTX 2070 512GB Solid State Drive at Best Buy. Find low everyday prices and buy online for 
+                  delivery or in-store pick-up. Price Match Guarantee.
+                </p>
               </div>
               <a href="#" class="btn">
-                <span class="btn-inner">Learn More</span>
+                <span class="btn-inner">Buy Now</span>
               </a>
             </div>
           </div>
           <div class="image-container">
-            <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg" alt="" class="image" />
+            <img src="./asset/asus.jpeg" alt="" class="image" />
           </div>
         </div>
       </div>

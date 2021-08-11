@@ -31,10 +31,9 @@
 										
 										<li class="dc-element-item"><a href="#"><i class="dc-icon-glyph dc-icon-glyph-small dc-icon-glyph-home"></i></a></li>
 										<li class="dc-element-item"><a href="#">Apple</a></li>
-										<li class="dc-element-item"><a href="#">Window</a></li>
+										<li class="dc-element-item"><a href="#">MSI</a></li>
 										<li class="dc-element-item"><a href="#">Dell</a></li>
 										<li class="dc-element-item"><a href="#">Asus</a></li>
-										<li class="dc-element-item"><a href="#">Lenovo</a></li>
 										<li class="dc-element-item"><a href="#">Contact</a></li>
 										<li class="dc-element-item"><a href="#">About</a></li>
 										<li class="dc-element-item"><a href="#"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-user"></i></a></li>
