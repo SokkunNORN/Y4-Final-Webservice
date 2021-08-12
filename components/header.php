@@ -1,3 +1,7 @@
+<?php
+	$base_url = '/Y4-ORM-Webservices/Final/';
+?>
+
 <!-- <demo:responsive-website-header> -->
 <div class="dc-global-header-wrapper is-hidden-small" 
     data-dc-global-header="clone-apple"
@@ -29,14 +33,14 @@
                                 >
 									<ul class="dc-element">
 										
-										<li class="dc-element-item"><a href="#"><i class="dc-icon-glyph dc-icon-glyph-small dc-icon-glyph-home"></i></a></li>
-										<li class="dc-element-item"><a href="#">Apple</a></li>
-										<li class="dc-element-item"><a href="#">MSI</a></li>
-										<li class="dc-element-item"><a href="#">Dell</a></li>
-										<li class="dc-element-item"><a href="#">Asus</a></li>
-										<li class="dc-element-item"><a href="#">Contact</a></li>
-										<li class="dc-element-item"><a href="#">About</a></li>
-										<li class="dc-element-item"><a href="#"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-user"></i></a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url; ?>"><i class="dc-icon-glyph dc-icon-glyph-small dc-icon-glyph-home"></i></a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=apple"; ?>">Apple</a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=msi"; ?>">MSI</a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=dell"; ?>">Dell</a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=asus"; ?>">Asus</a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=contact"; ?>">Contact</a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=about"; ?>">About</a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=account"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-user"></i></a></li>
 										
 										<!-- ... -->
 										

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAM: Computer</title>
+    <title>CAM - Computer</title>
+
+    <link rel="icon" href="./asset/logo.png" type="image/x-icon">
 
     <!-- Header -->
     <link rel="stylesheet" type="text/css" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/326786/global-header.css" />
@@ -28,7 +30,12 @@
 <body>
     <?php
         require('./components/header.php');
-        require('./view/home.php');
+
+        if (isset($_GET['link'])) {
+            require('./view/'.$_GET['link'].'.php');
+        } else {
+            require('./view/home.php');
+        }
     ?>
 
     <!-- Slide Show -->
