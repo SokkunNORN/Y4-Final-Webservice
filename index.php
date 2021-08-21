@@ -21,11 +21,9 @@
     <!-- Slide Show -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic">
     <link rel="stylesheet" href="./style/slideShow.css">
+    <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/footer.css">
 
-
-    <!-- Slide Show -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 </head>
 <body>
     <?php
@@ -36,9 +34,13 @@
         } else {
             require('./view/home.php');
         }
+
+        require('./components/footer.php');
     ?>
 
     <!-- Slide Show -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="./js/slideShow.js"></script>
 </body>
 </html>

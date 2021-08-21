@@ -1,0 +1,50 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #f6f8fa;
+    padding: 10px;
+    color: #f6f8fa;
+}
+
+@media only screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+}
+
+.grid-item {
+    border: 10px solid #f6f8fa;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-item:hover div {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.image-home-1 {
+    background-image: url("../asset/mac13.jpeg");
+}
+
+.image-home-2 {
+    background-image: url("../asset/msigf66.jpeg");
+}
+
+.image-home-3 {
+    background-image: url("../asset/dellxps.jpeg");
+}
+
+.image-home-4 {
+    background-image: url("../asset/asusf55.jpeg");
+}
+
+.grid-item small {
+    font-size: 14px !important;
+}
