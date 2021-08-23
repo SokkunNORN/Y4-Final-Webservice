@@ -21,7 +21,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <?php
-    if (isset($_GET['link']) == 'apple') {
+    if (
+        isset($_GET['link']) == 'apple' ||
+        isset($_GET['link']) == 'msi' ||
+        isset($_GET['link']) == 'dell' ||
+        isset($_GET['link']) == 'asus'
+    ) {
         ?>
             <link rel="stylesheet" href="./style/apple.css">
         <?php
@@ -46,6 +51,10 @@
 
         require('./components/footer.php');
     ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Slide Show -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
