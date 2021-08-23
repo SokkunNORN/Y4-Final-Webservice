@@ -1,3 +1,7 @@
+<?php
+	$base_url = '/Y4-ORM-Webservices/Final/';
+?>
+
 <main class="slide-show main-content">
   <section class="slideshow">
     <div class="slideshow-inner">
@@ -9,8 +13,8 @@
               <div class="text">
                 <p>MacBook Pro 16" 2021 Big Sur.Processor 2.3 GHz 8-Core Intel Core i9. Memory 16 GB 2667 MHz DDR4</p>
               </div>
-              <a href="#" class="btn">
-                <span class="btn-inner">Buy Now</span>
+              <a href="<?php echo $base_url."?link=apple"; ?>" class="btn">
+                <span class="btn-inner">Read More</span>
               </a>
             </div>
           </div>
@@ -28,8 +32,8 @@
                   Up to 4.50 GHz, NVIDIA GTX 1650 Graphics, 8GB RAM
                 </p>
               </div>
-              <a href="#" class="btn">
-                <span class="btn-inner">Buy Now</span>
+              <a href="<?php echo $base_url."?link=msi"; ?>" class="btn">
+                <span class="btn-inner">Read More</span>
               </a>
             </div>
           </div>
@@ -47,8 +51,8 @@
                   16GB RAM, 256GB SSD, Intel UHD Graphics, WiFi, Bluetooth, HDMI, Webcam, Backlit-KB, Win10
                 </p>
               </div>
-              <a href="#" class="btn">
-                <span class="btn-inner">Buy Now</span>
+              <a href="<?php echo $base_url."?link=dell"; ?>" class="btn">
+                <span class="btn-inner">Read More</span>
               </a>
             </div>
           </div>
@@ -67,8 +71,8 @@
                   delivery or in-store pick-up. Price Match Guarantee.
                 </p>
               </div>
-              <a href="#" class="btn">
-                <span class="btn-inner">Buy Now</span>
+              <a href="<?php echo $base_url."?link=asus"; ?>" class="btn">
+                <span class="btn-inner">Read More</span>
               </a>
             </div>
           </div>

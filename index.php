@@ -49,6 +49,8 @@
             require('./view/home.php');
         }
 
+        require('./components/formDialog.php');
+
         require('./components/footer.php');
     ?>
 

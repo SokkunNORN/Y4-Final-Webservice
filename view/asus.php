@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <div class="clearfix mb-3">  <span class="float-start price-hp"><?php echo $row['name']; ?></span> <span class="float-end  badge rounded-pill bg-success"><?php echo $row['price']; ?>$</span> </div>
                         <h5 class="card-title"><?php echo $row['description']; ?></h5>
-                        <div class="d-grid gap-2 my-4"> <a href="#" class="btn btn-warning">Buy Now</a> </div>
+                        <div class="d-grid gap-2 my-4"> <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-warning">Buy Now</a> </div>
                     </div>
                 </div>
             </div>

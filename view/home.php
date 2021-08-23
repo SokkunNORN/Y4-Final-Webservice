@@ -22,7 +22,7 @@
             <h5 class="card-title"><?php echo $row['name']; ?></h5>
             <h6><?php echo $row['price']; ?>$</h6>
             <h6><?php echo $row['description']; ?></h6>
-            <a href="#" class="btn btn-primary">Buy Now</a>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Buy Now</a>
           </div>
         </div>
       </div>
