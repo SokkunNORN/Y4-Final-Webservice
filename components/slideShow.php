@@ -1,4 +1,4 @@
-<main class="main-content">
+<main class="slide-show main-content">
   <section class="slideshow">
     <div class="slideshow-inner">
       <div class="slides">
@@ -75,20 +75,6 @@
           <div class="image-container">
             <img src="./asset/asus.jpeg" alt="" class="image" />
           </div>
-        </div>
-      </div>
-      <div class="pagination">
-        <div class="item is-active">
-          <span class="icon">1</span>
-        </div>
-        <div class="item">
-          <span class="icon">2</span>
-        </div>
-        <div class="item">
-          <span class="icon">3</span>
-        </div>
-        <div class="item">
-          <span class="icon">4</span>
         </div>
       </div>
       <div class="arrows">
