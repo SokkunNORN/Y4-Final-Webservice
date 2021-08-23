@@ -20,6 +20,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <?php
+    if (isset($_GET['link']) == 'apple') {
+        ?>
+            <link rel="stylesheet" href="./style/apple.css">
+        <?php
+    }
+    ?>
+
     <!-- Slide Show -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic">
     <link rel="stylesheet" href="./style/slideShow.css">

@@ -15,8 +15,9 @@
       <?php
       while ($row = mysqli_fetch_assoc($results)) {
       ?>   
-        <div class="card col-md-6 col-sm-12 mt-4" style="border: none;">
-          <img src="<?php echo './asset/' . $row['image']; ?>" class="card-img-top">
+      <div class="col-md-6 col-sm-12 mt-4">
+        <div class="card" style="border: none;">
+          <img src="<?php echo './asset/' . $row['image']; ?>" class="img-thumbnail mx-auto d-block">
           <div class="card-body">
             <h5 class="card-title"><?php echo $row['name']; ?></h5>
             <h6><?php echo $row['price']; ?>$</h6>
@@ -24,6 +25,7 @@
             <a href="#" class="btn btn-primary">Buy Now</a>
           </div>
         </div>
+      </div>
       <?php 
       };
       ?>
