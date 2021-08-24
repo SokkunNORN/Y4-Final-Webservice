@@ -1,7 +1,7 @@
 
 <div class="modal" id="myModal">
     <div class="modal-dialog">
-	  <form action="#">
+	  <form method="post" action="#">
       <div class="modal-content">
 		  
         <div class="modal-body">
@@ -73,7 +73,7 @@
         </div>
         
         <div class="modal-footer" style="border: none;">
-          <button type="submit" class="btn btn-primary btn-sm">Pay Now</button>
+          <button type="submit" class="btn btn-primary btn-sm" name="btn_paynow">Pay Now</button>
         </div>
         
       </div>
