@@ -9,7 +9,7 @@
 			<br>
 			<br>
 		  	<div class="form-group">
-				<input type="text" class="form-control form-control-sm" placeholder="Username" required>
+				<input type="text" class="form-control form-control-sm" placeholder="Card holder name" required>
 			</div>
 				<br>
 		  	<div class="form-group">
@@ -73,7 +73,7 @@
         </div>
         
         <div class="modal-footer" style="border: none;">
-          <button type="submit" class="btn btn-primary btn-sm" data-dismiss="modal">Sing In</button>
+          <button type="submit" class="btn btn-primary btn-sm">Pay Now</button>
         </div>
         
       </div>
