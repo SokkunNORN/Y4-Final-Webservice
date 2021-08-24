@@ -51,6 +51,8 @@
 
         require('./components/formDialog.php');
 
+        require('./components/contact.php');
+
         require('./components/footer.php');
     ?>
 

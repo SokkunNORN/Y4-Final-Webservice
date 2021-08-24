@@ -1,9 +1,10 @@
 footer .container-footer {
-    background-color: #F8F9FA;
+    background-color: #212529;
+    color: #fff;
 }
 
-footer .container .text-muted {
+footer .container-footer .text-muted {
     text-align: center;
-    padding: 20px !important;
-    font-size: 12px !important;
+    padding: 16px !important;
+    font-size: 14px !important;
 }
