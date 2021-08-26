@@ -24,7 +24,7 @@
             <h5 class="card-title" name="product_name" id="product_name"><?php echo $row['name']; ?></h5>
             <h6 name="total_amount" id="total_amount"><?php echo $row['price']; ?>$</h6>
             <h6 name="description"><?php echo $row['description']; ?></h6>
-            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Buy Now</a>
+            <a href="<?php echo $base_url.'view/order_process.php?id='.$row['id']; ?>" class="btn btn-primary">Buy Now</a>
           </div>
         </div>
       </div>

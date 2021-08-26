@@ -1,10 +1,6 @@
 
-<?php
-if (isset($_GET['id'])) {
-    echo $_GET['id'];
-}
-?>
-<!-- <form method="post" id="order_process_form" action="./view/payment.php">
+
+<form method="post" id="order_process_form" action="./view/payment.php">
 <div class="modal-content">
 
 <div class="modal-body">
@@ -80,4 +76,4 @@ if (isset($_GET['id'])) {
 </div>
 
 </div>
-</form> -->
+</form>
