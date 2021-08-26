@@ -7,13 +7,16 @@
         AND brand.id = product.brand_id
         AND brand.name LIKE 'Asus'";
 
-    $results = $conn->query($query);
-    if ($results) {
+$statement = $conn->prepare($query);
+
+if ($statement->execute()) {
+  $result = $statement->fetchAll();
+?>
 ?>
 <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
         <?php
-        while ($row = mysqli_fetch_assoc($results)) {
+        foreach ($result as $row) {
         ?>
             <div class="col">
                 <div class="card h-100 shadow-sm"> <img src="<?php echo './asset/' . $row['image']; ?>" class="card-img-top" alt="...">

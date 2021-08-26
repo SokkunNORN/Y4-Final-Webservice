@@ -18,18 +18,18 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
-            <form action="#">
+            <form action="#" method="post">
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control form-control-sm" placeholder="First Name" required>
+                    <input type="text" name="firstname" class="form-control form-control-sm" placeholder="First Name" required>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control form-control-sm" placeholder="Last Name" required>
+                    <input type="text" name="lastname" class="form-control form-control-sm" placeholder="Last Name" required>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control form-control-sm" placeholder="Subject" required>
+                    <input type="text" name="subject" class="form-control form-control-sm" placeholder="Subject" required>
                 </div>
                 <div class="form-group mb-4">
-                    <textarea type="text" class="form-control form-control-sm" placeholder="Address"></textarea>
+                    <textarea type="text" name="address" class="form-control form-control-sm" placeholder="Address"></textarea>
                 </div>
                 <div class="form-group mb-4">
                     <button type="submit" class="btn btn-primary btn-sm" name="btn_paynow">Send Message</button>
@@ -38,3 +38,6 @@
         </div>
     </div>
 </div>
+<?php
+    
+?>

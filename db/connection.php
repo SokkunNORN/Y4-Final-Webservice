@@ -1,11 +1,6 @@
 <?php
 
-$S_NAME = 'localhost';
-$UNAME = 'root';
-$PASS = '';
-$DB_NAME = 'computer_shop';
-
-$conn = new mysqli($S_NAME, $UNAME, $PASS, $DB_NAME);
+$conn = new PDO("mysql:host=localhost;dbname=computer_shop", "root", "");
     
 if (!$conn) {
     die(mysqli_error($conn));
