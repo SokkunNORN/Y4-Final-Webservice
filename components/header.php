@@ -1,5 +1,5 @@
 <?php
-	$base_url = '/Y4-Final-Webservice/';
+	$base_url = '/Y4-ORM-Webservices/Final/';
 ?>
 
 <!-- <demo:responsive-website-header> -->

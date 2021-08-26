@@ -96,7 +96,7 @@ if (isset($_POST["token"])) {
         // unset($_SESSION["shopping_cart"]);
  
         $_SESSION["success_message"] = "Payment is completed successfully. The TXN ID is " . $response["balance_transaction"] . "";
-        header('location:http://localhost/Y4-Final-Webservice/');
+        header('location:http://localhost/Y4-ORM-Webservices/Final/');
     }
 }
 ?>

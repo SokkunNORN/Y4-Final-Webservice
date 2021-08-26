@@ -1,7 +1,7 @@
 <?php
   require('./components/slideShow.php');
   require('./db/connection.php');
-	$base_url = '/Y4-Final-Webservice/';
+	$base_url = '/Y4-ORM-Webservices/Final/';
   $query = "SELECT * 
         FROM `product`
         WHERE product.status_id = 1
