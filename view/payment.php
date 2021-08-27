@@ -4,8 +4,6 @@
  
 include('../db/connection.php');
 session_start();
-
-$product = "SELECT * FROM product WHERE id=".$_GET["id"]
  
 if (isset($_POST["token"])) {
     require_once '../vendor/autoload.php';
@@ -29,7 +27,7 @@ if (isset($_POST["token"])) {
  
     $charge = \Stripe\Charge::create(array(
         'customer'  => $customer->id,
-        'amount'  => $_GET["total_amount"],
+        'amount'  => 1209*100,
         'currency'  => 'USD',
         'description' => "Mac Book Air 13",
         'metadata'  => array(
@@ -96,7 +94,7 @@ if (isset($_POST["token"])) {
         // unset($_SESSION["shopping_cart"]);
  
         $_SESSION["success_message"] = "Payment is completed successfully. The TXN ID is " . $response["balance_transaction"] . "";
-        header('location:http://localhost/Y4-ORM-Webservices/Final/');
+        header('location:http://localhost/Y4-Final-Webservice/');
     }
 }
 ?>
