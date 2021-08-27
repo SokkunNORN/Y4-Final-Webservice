@@ -19,7 +19,18 @@
                     <div class="card-body">
                         <div class="clearfix mb-3">  <span class="float-start price-hp"><?php echo $row['name']; ?></span> <span class="float-end  badge rounded-pill bg-success"><?php echo $row['price']; ?>$</span> </div>
                         <h5 class="card-title"><?php echo $row['description']; ?></h5>
-                        <div class="d-grid gap-2 my-4"> <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-warning">Buy Now</a> </div>
+                        <div class="row mt-3">
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <input type="number" value='1' id="<?php echo 'quantity-'.$row['id'] ?>" class="form-control form-control-sm" name="" required>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-block btn-sm btn-warning" onclick="addToCart(<?php echo $row['id'];?>)" style="width: 100%;" type="submit">
+                                    <i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-shopping-cart"></i>
+                                </button> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -31,4 +42,12 @@
 <?php
     }
 ?>
+
+<script>
+
+    function addToCart (id) {
+        console.log(id);
+    }
+
+</script>
 
