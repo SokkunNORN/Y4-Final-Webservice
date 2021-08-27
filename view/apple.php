@@ -46,7 +46,19 @@
 <script>
 
     function addToCart (id) {
-        console.log(id);
+
+        const pNumber = document.getElementById('quantity-' + id).value
+        console.log(pNumber);
+        $.ajax({
+            url: "./process/product_process.php",
+            method: "POST",
+            data: {
+                id: id,
+                p_number: pNumber,
+                action: 'add'
+            },
+            success: function(data) {}
+        })
     }
 
 </script>
