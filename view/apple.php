@@ -48,7 +48,6 @@
     function addToCart (id) {
 
         const pNumber = document.getElementById('quantity-' + id).value
-        console.log(pNumber);
         $.ajax({
             url: "./process/product_process.php",
             method: "POST",
