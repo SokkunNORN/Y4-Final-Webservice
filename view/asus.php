@@ -56,7 +56,9 @@
                 p_number: pNumber,
                 action: 'add'
             },
-            success: function(data) {}
+            success: function(data) {
+              alert('Product has been added into cart.')
+            }
         })
     }
 

@@ -22,7 +22,7 @@
             <h5 class="card-title"><?php echo $row['name']; ?></h5>
             <h6><?php echo $row['price']; ?>$</h6>
             <h6><?php echo $row['description']; ?></h6>
-            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Buy Now</a>
+            <button onclick="addToCart(<?php echo $row['id'];?>)" class="btn btn-primary">Add To Cart</button>
           </div>
         </div>
       </div>
@@ -35,3 +35,22 @@
   }
   
 ?>
+
+<script>
+
+    function addToCart (id) {
+        $.ajax({
+            url: "./process/product_process.php",
+            method: "POST",
+            data: {
+                id: id,
+                p_number: 1,
+                action: 'add'
+            },
+            success: function(data) {
+              alert('Product has been added into cart.')
+            }
+        })
+    }
+
+</script>
