@@ -39,6 +39,7 @@
 										<li class="dc-element-item"><a href="<?php echo $base_url."?link=dell"; ?>">Dell</a></li>
 										<li class="dc-element-item"><a href="<?php echo $base_url."?link=asus"; ?>">Asus</a></li>
 										<li class="dc-element-item"><a href="<?php echo $base_url."?link=about"; ?>">About</a></li>
+										<li class="dc-element-item"><a href="<?php echo $base_url."?link=checkout"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-shopping-cart"></i></a></li>
 										<li class="dc-element-item"><a href="<?php echo $base_url."?link=account"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-user"></i></a></li>
 										
 										<!-- ... -->
