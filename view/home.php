@@ -4,7 +4,6 @@
 
   $query = "SELECT * 
         FROM `product`
-        WHERE product.status_id = 1
         LIMIT 4";
 
   $results = $conn->query($query);

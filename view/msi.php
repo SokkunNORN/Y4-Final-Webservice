@@ -3,8 +3,7 @@
 
     $query = "SELECT product.* 
         FROM `product`, `brand`
-        WHERE product.status_id = 1
-        AND brand.id = product.brand_id
+        WHERE brand.id = product.brand_id
         AND brand.name LIKE 'MSI'";
 
     $results = $conn->query($query);
