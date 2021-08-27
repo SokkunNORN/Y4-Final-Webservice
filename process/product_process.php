@@ -9,7 +9,7 @@ if (isset($_POST['action'])) {
 
     $query = "INSERT INTO `product_process` 
     (seller_id, pid, buyer_id, number_product, status_id)
-    VALUES (1, $id, 1, $p_number, 2)";
+    VALUES (2, $id, 1, $p_number, 2)";
 
     $conn->query($query);
 }
