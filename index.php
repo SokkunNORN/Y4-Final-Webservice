@@ -70,8 +70,6 @@
                 } else {
                     require('./view/admin/home.php');
                 }
-        
-                require('./components/footer.php');
 
             } else {
                 require('./components/header.php');

@@ -30,3 +30,20 @@ if (isset($_POST['remove-product'])) {
 
     header("Location: ../?link=checkout");
 }
+
+
+if (isset($_POST['btn-add-product'])) {
+    $pname = $_POST['pname'];
+    $pdescription = $_POST['pdescription'];
+    $pprice = $_POST['pprice'];
+    $pdiscount = $_POST['pdiscount'];
+    $pbrand = $_POST['pbrand'];
+    $uid = $_SESSION['id'];
+
+    $query = "INSERT INTO `product` (name, 	description, image, price, discount, brand_id, uid)
+            VALUES ('$pname', '$pdescription', 'asus.jpeg', $pprice, $pdiscount, $pbrand, $uid)";
+    
+    $conn->query($query);
+
+    header("Location: ../?link=home");
+}
