@@ -47,3 +47,14 @@ if (isset($_POST['btn-add-product'])) {
 
     header("Location: ../?link=home");
 }
+
+if (isset($_POST['remove'])) {
+
+    $id = $_POST['product_id'];
+
+    $query = "DELETE FROM `product` WHERE id = $id";
+    
+    $conn->query($query);
+
+    header("Location: ../?link=home");
+}

@@ -2,7 +2,7 @@
 
     require('./db/connection.php');
 
-	$query = "SELECT product.*, brand.name as brand_name
+	$query = "SELECT product.*, product.id as pid, brand.name as brand_name
 			FROM `product`, `brand`, `user`
 			WHERE product.brand_id = brand.id
 			AND user.id = product.uid";
@@ -44,11 +44,10 @@
                 <td><?php echo $row['discount']; ?>%</td>
                 <td><?php echo $row['brand_name'] ?></td>
                 <td>
-                    <form action="./process/product_process.php" method="post">
-						<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
-						<button type="submit" name="remove-product" class="btn btn-outline-danger btn-sm">Delete</button>
-						<button type="submit" name="edit-product" class="btn btn-outline-warning btn-sm">Edit</button>
-					</form>
+                <form action="./process/product_process.php" method="post">
+                    <input type="hidden" name="product_id" value="<?php echo $row['pid']; ?>">
+                    <button type="submit" name="remove" class="btn btn-outline-danger btn-sm">Remove</button>
+				</form>
                 </td>
             </tr>
             <?php
