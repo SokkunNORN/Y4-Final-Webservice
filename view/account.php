@@ -2,6 +2,11 @@
 
     require('./db/connection.php');
 
+
+    if (isset($_POST['btn-logout'])) {
+        session_destroy();
+    }
+
     if (isset($_POST['l-btn-login'])) {
 
         $uname = $_POST['l-uname'];
@@ -14,6 +19,7 @@
         $row = mysqli_fetch_assoc($results);
 
         if ($row['uname'] == $uname && $row['pass'] == $pass) {
+            $_SESSION['id'] = $row['id'];
             $_SESSION['uname'] = $row['uname'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['address'] = $row['address'];
@@ -215,7 +221,7 @@
                     </tr>
                     <tr>
                         <td>Expiry Month:</td>
-                        <td><?php echo $_SESSION['expiryMonty']; ?></td>
+                        <td><?php echo $_SESSION['expiryMonth']; ?></td>
                     </tr>
                     <tr>
                         <td>Expiry Year:</td>
@@ -227,6 +233,9 @@
                     </tr>
                 </tbody>
             </table>
+            <form action="#" method="post">
+                <button type="submit" name="btn-logout" class="btn btn-primary btn-sm" name="btn_paynow">Logout</button>
+            </form>
 
             <?php
                 }
@@ -234,4 +243,6 @@
         </div>
     </div>
 </div>
+
+<?php
 
