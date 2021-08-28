@@ -44,18 +44,50 @@
 </head>
 <body>
     <?php
-        require('./components/header.php');
+        if (!isset($_SESSION['id'])) {
+            require('./components/header.php');
 
-        if (isset($_GET['link'])) {
-            require('./view/'.$_GET['link'].'.php');
+            if (isset($_GET['link'])) {
+                require('./view/'.$_GET['link'].'.php');
+            } else {
+                require('./view/home.php');
+            }
+            if (isset($_GET['link']) != 'account') {
+                require('./components/contact.php');
+            }
+    
+            require('./components/footer.php');
         } else {
-            require('./view/home.php');
-        }
-        if (isset($_GET['link']) != 'account') {
-            require('./components/contact.php');
-        }
+            if ($_SESSION['role_id'] == 2) {
+                require('./components/header.php');
 
-        require('./components/footer.php');
+                if (isset($_GET['link'])) {
+                    if ($_GET['link'] != 'account') {
+                        require('./view/admin/'.$_GET['link'].'.php');
+                    } else  {
+                        require('./view/account.php');
+                    }
+                } else {
+                    require('./view/admin/home.php');
+                }
+        
+                require('./components/footer.php');
+
+            } else {
+                require('./components/header.php');
+
+                if (isset($_GET['link'])) {
+                    require('./view/'.$_GET['link'].'.php');
+                } else {
+                    require('./view/home.php');
+                }
+                if (isset($_GET['link']) != 'account') {
+                    require('./components/contact.php');
+                }
+        
+                require('./components/footer.php');
+            }
+        }
     ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

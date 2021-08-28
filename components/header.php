@@ -32,16 +32,23 @@
                                     data-dc-state="default"
                                 >
 									<ul class="dc-element">
-										
-										<li class="dc-element-item"><a href="<?php echo $base_url; ?>"><i class="dc-icon-glyph dc-icon-glyph-small dc-icon-glyph-home"></i></a></li>
-										<li class="dc-element-item"><a href="<?php echo $base_url."?link=apple"; ?>">Apple</a></li>
-										<li class="dc-element-item"><a href="<?php echo $base_url."?link=msi"; ?>">MSI</a></li>
-										<li class="dc-element-item"><a href="<?php echo $base_url."?link=dell"; ?>">Dell</a></li>
-										<li class="dc-element-item"><a href="<?php echo $base_url."?link=asus"; ?>">Asus</a></li>
-										<li class="dc-element-item"><a href="<?php echo $base_url."?link=about"; ?>">About</a></li>
-										<li class="dc-element-item"><a href="<?php echo $base_url."?link=checkout"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-shopping-cart"></i></a></li>
-										<li class="dc-element-item"><a href="<?php echo $base_url."?link=account"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-user"></i></a></li>
-										
+
+										<?php 
+											if ($_SESSION['role_id'] != 2) {
+										?>
+											<li class="dc-element-item"><a href="<?php echo $base_url; ?>"><i class="dc-icon-glyph dc-icon-glyph-small dc-icon-glyph-home"></i></a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=apple"; ?>">Apple</a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=msi"; ?>">MSI</a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=dell"; ?>">Dell</a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=asus"; ?>">Asus</a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=about"; ?>">About</a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=checkout"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-shopping-cart"></i></a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=account"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-user"></i></a></li>
+										<?php } else { ?>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=home"; ?>"><i class="dc-icon-glyph dc-icon-glyph-small dc-icon-glyph-home"></i></a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=product"; ?>">Product</a></li>
+											<li class="dc-element-item"><a href="<?php echo $base_url."?link=account"; ?>"><i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-user"></i></a></li>
+										<?php } ?>
 										<!-- ... -->
 										
 										<li class="dc-element-item justify"></li>
