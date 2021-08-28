@@ -1,5 +1,34 @@
 <?php
-    session_start();
+
+    require('./db/connection.php');
+
+    if (isset($_POST['l-btn-login'])) {
+
+        $uname = $_POST['l-uname'];
+        $pass = $_POST['l-pass'];
+
+        $query = "SELECT * FROM `user` WHERE uname = '$uname' AND pass = '$pass'";
+
+        $results = $conn->query($query);
+
+        $row = mysqli_fetch_assoc($results);
+
+        if ($row['uname'] == $uname && $row['pass'] == $pass) {
+            $_SESSION['uname'] = $row['uname'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['address'] = $row['address'];
+            $_SESSION['city'] = $row['city'];
+            $_SESSION['zip'] = $row['zip'];
+            $_SESSION['state'] = $row['state'];
+            $_SESSION['country'] = $row['country'];
+            $_SESSION['cardNumber'] = $row['cardNumber'];
+            $_SESSION['expiryMonth'] = $row['expiryMonth'];
+            $_SESSION['expiryYear'] = $row['expiryYear'];
+            $_SESSION['cvc'] = $row['cvc'];
+            $_SESSION['role_id'] = $row['role_id'];
+        }
+    }
+
 ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -10,6 +39,11 @@
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
+
+            <?php  
+                if (!isset($_SESSION['uname'])) {
+            ?>
+        
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active">
                     <a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a>
@@ -139,37 +173,65 @@
 
                 </div>
             </div>
+
+            <?php 
+                } else {
+            ?>
+            
+            <table class="table table-lg table-striped">
+                <thead>
+                <tbody>
+                    <tr>
+                        <td>Username:</td>
+                        <td><?php echo $_SESSION['uname']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><?php echo $_SESSION['email']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><?php echo $_SESSION['address']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td><?php echo $_SESSION['city']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Zip:</td>
+                        <td><?php echo $_SESSION['zip']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td><?php echo $_SESSION['state']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td><?php echo $_SESSION['country']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Card Number:</td>
+                        <td><?php echo $_SESSION['cardNumber']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Expiry Month:</td>
+                        <td><?php echo $_SESSION['expiryMonty']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Expiry Year:</td>
+                        <td><?php echo $_SESSION['expiryYear']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>CVC:</td>
+                        <td><?php echo $_SESSION['cvc']; ?></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <?php
+                }
+            ?>
         </div>
     </div>
 </div>
 
-<?php
-
-require('./db/connection.php');
-
-if (isset($_POST['l-btn-login'])) {
-
-    $uname = $_POST['l-uname'];
-    $pass = $_POST['l-pass'];
-
-    $query = "SELECT * FROM `user` WHERE uname = '$uname' AND pass = '$pass'";
-
-    $results = $conn->query($query);
-
-    $row = mysqli_fetch_assoc($results);
-
-    if ($row['uname'] == $uname && $row['pass'] == $pass) {
-        $_SESSION['uname'] = $row['uname'];
-        $_SESSION['email'] = $row['email'];
-        $_SESSION['address'] = $row['address'];
-        $_SESSION['city'] = $row['city'];
-        $_SESSION['zip'] = $row['zip'];
-        $_SESSION['state'] = $row['state'];
-        $_SESSION['country'] = $row['country'];
-        $_SESSION['cardNumber'] = $row['cardNumber'];
-        $_SESSION['expiryMonth'] = $row['expiryMonth'];
-        $_SESSION['expiryYear'] = $row['expiryYear'];
-        $_SESSION['cvc'] = $row['cvc'];
-        $_SESSION['role_id'] = $row['role_id'];
-    }
-}

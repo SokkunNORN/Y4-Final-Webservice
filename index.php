@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,8 +52,9 @@
         } else {
             require('./view/home.php');
         }
-
-        require('./components/contact.php');
+        if (isset($_GET['link']) != 'account') {
+            require('./components/contact.php');
+        }
 
         require('./components/footer.php');
     ?>

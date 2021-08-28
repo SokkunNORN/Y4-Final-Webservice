@@ -1,4 +1,7 @@
 <?php
+
+  session_start();
+
   require('./components/slideShow.php');
   require('./db/connection.php');
 
