@@ -5,7 +5,6 @@
             SUM(product_process.number_product) as 'p_total'
             FROM `product_process`,`product`
             WHERE product.id = product_process.pid
-            AND product_process.buyer_id = 1
             AND product_process.seller_id = 2
             GROUP BY product_process.pid;";
 
