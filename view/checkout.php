@@ -1,11 +1,14 @@
 <?php 
     require('./db/connection.php');
 
-    $query = "SELECT product.*, product_process.*, 
+	$buyer_id = $_SESSION['id'];
+
+    $query = "SELECT product.*, product.id as product_id, 
+			product_process.*, 
             SUM(product_process.number_product) as 'p_total'
             FROM `product_process`,`product`
             WHERE product.id = product_process.pid
-            AND product_process.seller_id = 2
+            AND product_process.buyer_id = $buyer_id
             GROUP BY product_process.pid;";
 
     $results = $conn->query($query);
@@ -36,8 +39,11 @@
                 <td>$ <?php echo $row['price']; ?></td>
                 <td>$ <?php echo $row['price'] * $row['p_total']; ?></td>
                 <td>
-                    <button><?php echo $row['id']; ?></button>
-                </td>
+					<form action="./process/product_process.php" method="post">
+						<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
+						<button type="submit" name="remove-product" class="btn btn-outline-danger btn-sm">Delete</button>
+					</form>
+				</td>
             </tr>
             <?php
                 }

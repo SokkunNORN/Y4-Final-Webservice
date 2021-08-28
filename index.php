@@ -39,7 +39,6 @@
 
     <!-- Slide Show -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic">
-    <link rel="stylesheet" href="./style/slideShow.css">
     <link rel="stylesheet" href="./style/footer.css">
 
 </head>

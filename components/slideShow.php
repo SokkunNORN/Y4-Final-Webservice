@@ -2,6 +2,8 @@
 	$base_url = '/Y4-ORM-Webservices/Final/';
 ?>
 
+<link rel="stylesheet" href="./style/slideShow.css">
+
 <main class="slide-show main-content">
   <section class="slideshow">
     <div class="slideshow-inner">

@@ -188,6 +188,10 @@
                 <thead>
                 <tbody>
                     <tr>
+                        <td>ID:</td>
+                        <td><?php echo $_SESSION['id']; ?></td>
+                    </tr>
+                    <tr>
                         <td>Username:</td>
                         <td><?php echo $_SESSION['uname']; ?></td>
                     </tr>
