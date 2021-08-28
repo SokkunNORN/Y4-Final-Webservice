@@ -2,11 +2,6 @@
 
     require('./db/connection.php');
 
-
-    if (isset($_POST['btn-logout'])) {
-        session_destroy();
-    }
-
     if (isset($_POST['l-btn-login'])) {
 
         $uname = $_POST['l-uname'];
@@ -237,8 +232,8 @@
                     </tr>
                 </tbody>
             </table>
-            <form action="#" method="post">
-                <button type="submit" name="btn-logout" class="btn btn-primary btn-sm" name="btn_paynow">Logout</button>
+            <form action="./process/logout.php" method="post">
+                <button type="submit" name="btn-logout" class="btn btn-primary btn-sm">Logout</button>
             </form>
 
             <?php

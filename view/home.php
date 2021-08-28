@@ -1,6 +1,8 @@
 <?php
 
   session_start();
+  
+  $base_url = '/Y4-ORM-Webservices/Final/';
 
   require('./components/slideShow.php');
   require('./db/connection.php');
@@ -25,7 +27,15 @@
             <h5 class="card-title"><?php echo $row['name']; ?></h5>
             <h6><?php echo $row['price']; ?>$</h6>
             <h6><?php echo $row['description']; ?></h6>
+            <?php
+            if (!isset($_SESSION['uname'])) {
+              ?>
+                <a href="<?php echo $base_url."?link=account"; ?>" class="btn btn-primary">Add To Cart</a>
+              <?php
+            } else {
+            ?>
             <button onclick="addToCart(<?php echo $row['id'];?>)" class="btn btn-primary">Add To Cart</button>
+            <?php } ?>
           </div>
         </div>
       </div>

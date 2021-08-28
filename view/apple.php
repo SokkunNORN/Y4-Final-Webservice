@@ -26,9 +26,19 @@
                                 </div>
                             </div>
                             <div class="col-4">
+                                <?php
+                                if (!isset($_SESSION['uname'])) {
+                                ?>
+                                    <a class="btn btn-block btn-sm btn-warning" href="<?php echo $base_url."?link=account"; ?>" style="width: 100%;">
+                                        <i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-shopping-cart"></i>
+                                    </a>
+                                <?php
+                                } else {
+                                ?>
                                 <button class="btn btn-block btn-sm btn-warning" onclick="addToCart(<?php echo $row['id'];?>)" style="width: 100%;" type="submit">
                                     <i class="dc-icon-glyph dc-icon-glyph-x-small dc-icon-glyph-shopping-cart"></i>
                                 </button> 
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

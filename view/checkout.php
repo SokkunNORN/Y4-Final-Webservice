@@ -131,5 +131,7 @@
 </div>
 </div>
 <?php
-    }
+    } else {
+		echo '<h2 class="mt-4 text-center">Please login...</h2>';
+	}
 ?>
