@@ -14,6 +14,8 @@
     <div class="row">
     <div class="col-12">
 
+    <h4>Product List</h4>
+
     <div class="modal-footer" style="border: none;">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
             Create
