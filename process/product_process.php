@@ -11,8 +11,8 @@ if (isset($_POST['action'])) {
     $buyer_id = $_SESSION['id'];
 
     $query = "INSERT INTO `product_process` 
-    (buyer_id, pid, number_product, status_id)
-    VALUES ($buyer_id, $pid, $p_number, 2)";
+            (buyer_id, pid, number_product, status_id)
+            VALUES ($buyer_id, $pid, $p_number, 2)";
 
     $conn->query($query);
 }
@@ -23,9 +23,9 @@ if (isset($_POST['remove-product'])) {
     $buyer_id = $_SESSION['id'];
 
     $query = "DELETE FROM `product_process` 
-    WHERE pid = $pid 
-    AND buyer_id = $buyer_id
-    AND status_id = 2";
+            WHERE pid = $pid 
+            AND buyer_id = $buyer_id
+            AND status_id = 2";
 
     $conn->query($query);
 
@@ -64,8 +64,8 @@ if (isset($_POST['btn_clear_checkout'])) {
     $buyer_id = $_SESSION['id'];
 
     $query = "DELETE FROM `product_process` 
-    WHERE buyer_id = $buyer_id
-    AND status_id = 2";
+            WHERE buyer_id = $buyer_id
+            AND status_id = 2";
 
     $conn->query($query);
 
@@ -73,5 +73,14 @@ if (isset($_POST['btn_clear_checkout'])) {
 }
 
 if (isset($_POST['btn_pay_checkout'])) {
-    
+    $buyer_id = $_SESSION['id'];
+
+    $query = "UPDATE `product_process` 
+            SET `status_id` = 3
+            WHERE buyer_id = $buyer_id
+            AND status_id = 2";
+
+    $conn->query($query);
+
+    header("Location: ../?link=checkout");
 }
