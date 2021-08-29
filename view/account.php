@@ -1,34 +1,6 @@
 <?php
 
-    require('./db/connection.php');
-
-    if (isset($_POST['l-btn-login'])) {
-
-        $uname = $_POST['l-uname'];
-        $pass = $_POST['l-pass'];
-
-        $query = "SELECT * FROM `user` WHERE uname = '$uname' AND pass = '$pass'";
-
-        $results = $conn->query($query);
-
-        $row = mysqli_fetch_assoc($results);
-
-        if ($row['uname'] == $uname && $row['pass'] == $pass) {
-            $_SESSION['id'] = $row['id'];
-            $_SESSION['uname'] = $row['uname'];
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['address'] = $row['address'];
-            $_SESSION['city'] = $row['city'];
-            $_SESSION['zip'] = $row['zip'];
-            $_SESSION['state'] = $row['state'];
-            $_SESSION['country'] = $row['country'];
-            $_SESSION['cardNumber'] = $row['cardNumber'];
-            $_SESSION['expiryMonth'] = $row['expiryMonth'];
-            $_SESSION['expiryYear'] = $row['expiryYear'];
-            $_SESSION['cvc'] = $row['cvc'];
-            $_SESSION['role_id'] = $row['role_id'];
-        }
-    }
+    session_start();
 
 ?>
 
@@ -60,7 +32,7 @@
                 <!-- LOGIN -->
                 <div role="tabpanel" class="tab-pane active" id="login">
                 
-                    <form action="#" method="post">
+                    <form action="./process/auth_process.php" method="post">
                         <div class="form-group">
                             <input type="text" name="l-uname" class="form-control form-control-sm" placeholder="Username" required>
                         </div>
@@ -69,7 +41,7 @@
                             <input type="password" name="l-pass" class="form-control form-control-sm" placeholder="Password" required>
                         </div>
                         <div class="modal-footer" style="border: none;">
-                            <button type="submit" name="l-btn-login" class="btn btn-primary btn-sm" name="btn_paynow">Login</button>
+                            <button type="submit" name="l-btn-login" class="btn btn-primary btn-sm">Login</button>
                         </div>
                     </form>
 
@@ -232,7 +204,7 @@
                     </tr>
                 </tbody>
             </table>
-            <form action="./process/logout.php" method="post">
+            <form action="./process/auth_process.php" method="post">
                 <button type="submit" name="btn-logout" class="btn btn-primary btn-sm">Logout</button>
             </form>
 
