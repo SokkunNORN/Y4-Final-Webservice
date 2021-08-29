@@ -38,3 +38,9 @@ if (isset($_POST['l-btn-login'])) {
 
     header("Location: ../?link=account");
 }
+
+if (isset($_POST['r-btn-register-buyer'])) {
+    $isRegister = $_POST['is-seller'];
+
+    echo $isRegister;
+}
