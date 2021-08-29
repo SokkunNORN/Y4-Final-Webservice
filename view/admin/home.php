@@ -2,10 +2,13 @@
 
     require('./db/connection.php');
 
+    $id = $_SESSION['id'];
+
 	$query = "SELECT product.*, product.id as pid, brand.name as brand_name
 			FROM `product`, `brand`, `user`
 			WHERE product.brand_id = brand.id
-			AND user.id = product.uid";
+			AND user.id = product.uid
+            AND user.id = $id";
 
     $results = $conn->query($query);
 ?>
