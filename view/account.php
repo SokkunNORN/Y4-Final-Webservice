@@ -22,10 +22,7 @@
                     <a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a>
                 </li>
                 <li role="presentation">
-                    <a href="#buyerResgister" aria-controls="buyerResgister" role="tab" data-toggle="tab">Register as Buyer</a>
-                </li>
-                <li role="presentation">
-                    <a href="#sellerResgister" aria-controls="sellerResgister" role="tab" data-toggle="tab">Register as Seller</a>
+                    <a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a>
                 </li>
             </ul>
             <br>
@@ -50,10 +47,20 @@
 
                 </div>
 
-                <!-- REGISTER AS BUYER -->
-                <div role="tabpanel" class="tab-pane" id="buyerResgister">
+                <!-- REGISTER -->
+                <div role="tabpanel" class="tab-pane" id="register">
 
                     <form action="./process/auth_process.php" method="POST">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="is-seller" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Register as seller
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row mt-4">
                             <div class="col-12">
                                 <div class="form-group">
@@ -143,32 +150,9 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="modal-footer" style="border: none;">
-                                    <button type="submit" name="r-btn-register-buyer" class="btn btn-primary btn-sm">Reginster</button>
+                                    <button type="submit" name="r-btn-register" class="btn btn-primary btn-sm">Reginster</button>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-
-                </div>
-
-
-                <!-- REGISTER AS SELLER -->
-                <div role="tabpanel" class="tab-pane" id="sellerResgister">
-                
-                    <form action="./process/auth_process.php" method="post">
-                        <div class="form-group">
-                            <input type="text" name="r-uname" class="form-control form-control-sm" placeholder="Username" required>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="email" name="r-email" class="form-control form-control-sm" placeholder="Email" required>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="password" name="r-pass" class="form-control form-control-sm" placeholder="Password" required>
-                        </div>
-                        <div class="modal-footer" style="border: none;">
-                            <button type="submit" name="r-btn-register-seller" class="btn btn-primary btn-sm">Reginster</button>
                         </div>
                     </form>
 
