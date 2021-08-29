@@ -16,6 +16,7 @@
 
     $results = $conn->query($query);
     if ($results) {
+		$isExit = false;
 ?>
 
 <div class="container">
@@ -35,6 +36,7 @@
         <tbody>
             <?php
                 while ($row = mysqli_fetch_assoc($results)) {
+					$isExit = true;
             ?>
             <tr>
                 <td><?php echo $row['name']; ?></td>
@@ -53,12 +55,18 @@
             ?>
         </tbody>
     </table>
+	<?php 
+		if($isExit) { 
+	?>
 	  <form method="post" action="./process/product_process.php">
 		<div class="modal-footer" style="border: none;">
 			<button type="submit" class="btn btn-outline-danger btn-sm" name="btn_clear_checkout">Clear</button>
 			<button type="submit" class="btn btn-primary btn-sm" name="btn_pay_checkout">Pay Now</button>
 		</div>
 	  </form>
+	<?php 
+		}
+	?>
     </div>
 </div>
 </div>
