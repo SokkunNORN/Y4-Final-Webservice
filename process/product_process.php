@@ -24,7 +24,8 @@ if (isset($_POST['remove-product'])) {
 
     $query = "DELETE FROM `product_process` 
     WHERE pid = $pid 
-    AND buyer_id = $buyer_id";
+    AND buyer_id = $buyer_id
+    AND status_id = 2";
 
     $conn->query($query);
 
