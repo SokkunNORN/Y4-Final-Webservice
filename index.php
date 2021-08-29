@@ -52,7 +52,7 @@
             } else {
                 require('./view/home.php');
             }
-            if (isset($_GET['link']) != 'account') {
+            if ($_GET['link'] != 'account') {
                 require('./components/contact.php');
             }
     
@@ -79,7 +79,7 @@
                 } else {
                     require('./view/home.php');
                 }
-                if (isset($_GET['link']) != 'account') {
+                if ($_GET['link'] != 'account') {
                     require('./components/contact.php');
                 }
         
