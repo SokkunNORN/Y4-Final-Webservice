@@ -59,3 +59,19 @@ if (isset($_POST['remove'])) {
 
     header("Location: ../?link=home");
 }
+
+if (isset($_POST['btn_clear_checkout'])) {
+    $buyer_id = $_SESSION['id'];
+
+    $query = "DELETE FROM `product_process` 
+    WHERE buyer_id = $buyer_id
+    AND status_id = 2";
+
+    $conn->query($query);
+
+    header("Location: ../?link=checkout");
+}
+
+if (isset($_POST['btn_pay_checkout'])) {
+    
+}

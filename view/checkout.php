@@ -53,10 +53,10 @@
             ?>
         </tbody>
     </table>
-	  <form method="post" action="#">
+	  <form method="post" action="./process/product_process.php">
 		<div class="modal-footer" style="border: none;">
-			<button type="submit" class="btn btn-outline-danger btn-sm" name="btn_clear">Clear</button>
-			<button type="submit" class="btn btn-primary btn-sm" name="btn_paynow">Pay Now</button>
+			<button type="submit" class="btn btn-outline-danger btn-sm" name="btn_clear_checkout">Clear</button>
+			<button type="submit" class="btn btn-primary btn-sm" name="btn_pay_checkout">Pay Now</button>
 		</div>
 	  </form>
     </div>
