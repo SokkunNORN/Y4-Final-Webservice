@@ -80,7 +80,7 @@
 			WHERE product.id = product_process.pid
 			AND product_process.status_id != 2
 			AND product_process.buyer_id = $buyer_id
-			GROUP BY product_process.pid";
+			GROUP BY product_process.pid, product_process.status_id";
 
     $results_history = $conn->query($query);
 	if ($results_history) {
