@@ -1,6 +1,4 @@
 <?php
-
-  session_start();
   
   $base_url = '/Y4-ORM-Webservices/Final/';
 
