@@ -20,7 +20,7 @@
             <br>
             <br>
             <h2 >Norn Sokkun</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+            <p>I am sokkun from year 4 at the University of Puthisastra. I become from front-end developer.</p>
         </div>
         
         <div class="col-lg-6 p-4">
@@ -28,7 +28,7 @@
             <br>
             <br>
             <h2>Neang Sovanthai</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+            <p>I am sokkun from year 4 at the University of Puthisastra. I become from back-end developer.</p>
         </div>
 
       </div>
