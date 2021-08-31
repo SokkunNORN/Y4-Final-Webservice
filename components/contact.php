@@ -18,23 +18,49 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
-            <form action="#">
+            <form action="#" method="post">
+                <?php
+                    if (!isset($_SESSION['email'])) {
+                ?>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control form-control-sm" placeholder="First Name" required>
+                    <input type="text" name="name" class="form-control form-control-sm" placeholder="Name" required>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control form-control-sm" placeholder="Last Name" required>
+                    <input type="email" name="email" class="form-control form-control-sm" placeholder="Email" required>
+                </div>
+                <?php
+                    }
+                ?>
+                <div class="form-group mb-4">
+                    <input type="text" name="subject" class="form-control form-control-sm" placeholder="Subject" required>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control form-control-sm" placeholder="Subject" required>
+                    <textarea type="text" name="message" class="form-control form-control-sm" placeholder="Message" required></textarea>
                 </div>
                 <div class="form-group mb-4">
-                    <textarea type="text" class="form-control form-control-sm" placeholder="Address"></textarea>
-                </div>
-                <div class="form-group mb-4">
-                    <button type="submit" class="btn btn-primary btn-sm" name="btn_paynow">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-sm" name="send_message">Send Message</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<?php
+
+if (isset($_POST['send_message'])) {
+    // $name = $_POST['name'];
+    // $mailFrom = "From: " . $_POST['email'];
+    // $subject = 'Contact Online Computer - ' . $_POST['subject'];
+    // $message = $_POST['message'];
+    // $mailTo = "nsokkun.student@puthisastra.edu.kh";
+
+    // if (isset($_SESSION['email'])) {
+    //     $name = $_SESSION['uname'];
+    //     $mailFrom = "From: " . $_SESSION['email'];
+    // }
+
+    // if (mail($mailTo, $subject, $message, $mailFrom)) {
+
+    // }
+
+}

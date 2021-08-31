@@ -34,7 +34,7 @@
 									<ul class="dc-element">
 
 										<?php 
-											if ($_SESSION['role_id'] != 2) {
+											if (!isset($_SESSION['uname']) || $_SESSION['role_id'] != 2) {
 										?>
 											<li class="dc-element-item"><a href="<?php echo $base_url; ?>"><i class="dc-icon-glyph dc-icon-glyph-small dc-icon-glyph-home"></i></a></li>
 											<li class="dc-element-item"><a href="<?php echo $base_url."?link=apple"; ?>">Apple</a></li>
