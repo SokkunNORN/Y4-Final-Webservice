@@ -46,7 +46,7 @@ if (isset($_SESSION['id'])) {
 									<td>
 										<form action="./process/product_process.php" method="post">
 											<input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
-											<button type="submit" name="remove-product" class="btn btn-outline-danger btn-sm">Delete</button>
+											<button type="submit" name="remove-product" class="btn btn-outline-danger btn-sm">Remove</button>
 										</form>
 									</td>
 								</tr>
@@ -60,7 +60,7 @@ if (isset($_SESSION['id'])) {
 					?>
 						<form id="order_process_form" method="post" action="./process/product_process.php">
 							<div class="modal-footer" style="border: none;">
-								<button type="submit" class="btn btn-outline-danger btn-sm" name="btn_clear_checkout">Clear</button>
+								<button type="submit" id="button_action_clear" class="btn btn-outline-danger btn-sm" name="btn_clear_checkout">Clear</button>
 								<button type="submit" id="button_action" class="btn btn-primary btn-sm" onclick="stripePay(event)" name="btn_pay_checkout">Pay Now</button>
 							</div>
 						</form>
@@ -154,6 +154,7 @@ if (isset($_SESSION['id'])) {
 	function stripePay(event) {
 		event.preventDefault();
 		$('#button_action').attr('disabled', 'disabled');
+		$('#button_action_clear').attr('disabled', 'disabled');
 		$('#button_action').val('Payment Processing....');
 		Stripe.createToken({
 			number: <?php echo $_SESSION['cardNumber'] ?>,
